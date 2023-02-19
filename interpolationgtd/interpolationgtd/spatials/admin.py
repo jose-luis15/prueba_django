@@ -4,7 +4,7 @@ from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
 
 from interpolationgtd.users.forms import UserAdminChangeForm, UserAdminCreationForm
-from interpolationgtd.users.models import CrossPointField
+
 User = get_user_model()
 
 
@@ -31,8 +31,3 @@ class UserAdmin(auth_admin.UserAdmin):
     )
     list_display = ["username", "name", "is_superuser"]
     search_fields = ["name"]
-
-
-# @admin.register(CrossPointField)
-# class CrossPointFieldAdmin(auth_admin.UserAdmin):
-#     list_display = ["point"]

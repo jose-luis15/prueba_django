@@ -18,6 +18,7 @@ ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["example.com"])
 # DATABASES
 # ------------------------------------------------------------------------------
 DATABASES["default"]["CONN_MAX_AGE"] = env.int("CONN_MAX_AGE", default=60)  # noqa F405
+DATABASES["default"]["ENGINE"] = "django.contrib.gis.db.backends.postgis"
 
 # CACHES
 # ------------------------------------------------------------------------------
